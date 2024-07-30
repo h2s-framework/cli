@@ -1,0 +1,26 @@
+{
+  "name": "siarkowodor/h2s-cli",
+  "description": "Cli library (creates h2s.php script)",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "version": "0.1.0",
+  "type": "library",
+  "authors": [
+    {
+      "name": "H2S",
+      "email": "mateusz@siarko.pl"
+    }
+  ],
+  "bin": [
+    "src/bin/h2s"
+  ],
+  "require": {
+    "siarkowodor/h2s-dependency-manager": "*",
+    "symfony/console": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Siarko\\Cli\\": "src/"
+    }
+  }
+}

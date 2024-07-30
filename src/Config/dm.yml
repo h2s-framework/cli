@@ -1,0 +1,10 @@
+id: CliConfig
+types:
+  \Symfony\Component\Console\Output\OutputInterface: \Symfony\Component\Console\Output\ConsoleOutput
+  \Symfony\Component\Console\Input\InputInterface: \Symfony\Component\Console\Input\ArgvInput
+  \Siarko\Cli\Api\App\ErrorHandlerInterface: \Siarko\Cli\App\ErrorHandler
+
+arguments:
+  \Siarko\Modules\Paths\ModulePathsProvider:
+    pathTypes:
+      command: Commands

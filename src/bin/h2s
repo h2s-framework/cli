@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+
+if(version_compare(PHP_VERSION, '8.0') < 0){
+    echo "this php version is too old: ".PHP_VERSION.", at least 8.2 is required";
+    exit(0);
+}
+
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if(file_exists($GLOBALS['_composer_autoload_path'])){
+    require $GLOBALS['_composer_autoload_path'];
+}else{
+    die("APPLICATION AUTOLOADER NOT FOUND!");
+}
+
+$projectRoot = dirname(dirname($GLOBALS['_composer_bin_dir']));
+
+\Siarko\Profiler\Profiler::start();
+\Siarko\Api\State\Scope\ScopeProviderRegistry::setScope('cli');
+$bootstrap = new Siarko\Bootstrap\Bootstrap($projectRoot);
+$bootstrap->run(\Siarko\Cli\App\CliApp::class);
+\Siarko\Profiler\Profiler::end();
