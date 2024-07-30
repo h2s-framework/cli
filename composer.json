@@ -1,5 +1,5 @@
 {
-  "name": "siarkowodor/h2s-cli",
+  "name": "h2sf/cli",
   "description": "Cli library (creates h2s.php script)",
   "minimum-stability": "stable",
   "license": "proprietary",
@@ -15,7 +15,7 @@
     "src/bin/h2s"
   ],
   "require": {
-    "siarkowodor/h2s-dependency-manager": "*",
+    "h2sf/dependency-manager": "*",
     "symfony/console": "*"
   },
   "autoload": {
