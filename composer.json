@@ -3,7 +3,6 @@
   "description": "Cli library (creates h2s.php script)",
   "minimum-stability": "stable",
   "license": "proprietary",
-  "version": "0.1.0",
   "type": "library",
   "authors": [
     {
@@ -15,8 +14,8 @@
     "src/bin/h2s"
   ],
   "require": {
-    "h2sf/dependency-manager": "*",
-    "symfony/console": "*"
+    "h2sf/dependency-manager": "^0.3",
+    "symfony/console": "^7.3"
   },
   "autoload": {
     "psr-4": {
